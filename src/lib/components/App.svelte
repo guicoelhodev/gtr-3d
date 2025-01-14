@@ -12,6 +12,6 @@
 <style>
 	.environment {
 		height: 100%;
-		background-color: #fcfcfc;
+		background-color: #fff;
 	}
 </style>

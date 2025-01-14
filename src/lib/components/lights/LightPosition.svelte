@@ -7,7 +7,7 @@
 
 <!-->LEFT<!-->
 
-<T.PointLight castShadow position={[-2, 2, 1]} intensity={30} />
+<T.PointLight castShadow position={[-2, 4, 1]} intensity={30} />
 <T.PointLight castShadow position={[-2, 0, 2]} intensity={10} />
 
 <!-->RIGHT<!-->
