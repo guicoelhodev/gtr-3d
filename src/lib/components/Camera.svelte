@@ -4,6 +4,14 @@
 	import { OrbitControls } from '@threlte/extras';
 </script>
 
-<T.PerspectiveCamera makeDefault position={[camPos.x, camPos.y, camPos.z]} fov={20}>
-	<OrbitControls maxPolarAngle={1.5} maxZoom={1} minDistance={8} maxDistance={20} />
+<T.PerspectiveCamera makeDefault position={[camPos.x, camPos.y, camPos.z]} fov={15}>
+	<OrbitControls
+		target={[0, 0.5, 0]}
+		enablePan={false}
+		maxPolarAngle={1.5}
+		maxZoom={1}
+		minDistance={8}
+		maxDistance={20}
+		enableDamping
+	/>
 </T.PerspectiveCamera>
