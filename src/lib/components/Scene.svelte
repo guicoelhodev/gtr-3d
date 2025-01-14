@@ -19,6 +19,7 @@
 
 <Camera />
 
+
 <T.Group rotation={$rotationSpring}>
 	<ModelGtr />
 	<LightPosition />
