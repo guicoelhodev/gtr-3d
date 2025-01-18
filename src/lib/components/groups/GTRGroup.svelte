@@ -3,25 +3,14 @@
 	import ModelGtr from '../models/ModelGtr.svelte';
 	import LightPosition from '../lights/LightPosition.svelte';
 	import { Binding, Pane, Separator } from 'svelte-tweakpane-ui';
-
-	import { type BindingObject } from 'svelte-tweakpane-ui';
 	import { carAttr } from '$lib/state';
-
-	let object: BindingObject = {
-		rotationX: 0,
-		rotationY: 0,
-		rotationZ: 0,
-		positionX: 0,
-		positionY: 0,
-		positionZ: 0
-	};
 
 	const rotationFields = <K extends keyof typeof $carAttr.rotation>() => {
 		return Object.keys($carAttr.rotation) as K[];
 	};
 
 	const positionFields = <K extends keyof typeof $carAttr.position>() => {
-		return Object.keys($carAttr.rotation) as K[];
+		return Object.keys($carAttr.position) as K[];
 	};
 </script>
 
@@ -40,7 +29,7 @@
 	{#each positionFields() as coord}
 		<Binding
 			options={{ step: 0.05 }}
-			bind:object={$carAttr.rotation}
+			bind:object={$carAttr.position}
 			key={coord}
 			label={`Position ${coord}`}
 		/>
