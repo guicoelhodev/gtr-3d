@@ -2,9 +2,10 @@
 	import { T } from '@threlte/core';
 	import { camPos } from '$lib/applicationEnums';
 	import { OrbitControls } from '@threlte/extras';
+	import { carAttr } from '$lib/state';
 </script>
 
-<T.PerspectiveCamera makeDefault position={[camPos.x, camPos.y, camPos.z]} fov={15}>
+<T.PerspectiveCamera makeDefault position={[camPos.x, camPos.y, camPos.z]} fov={$carAttr.fov}>
 	<OrbitControls
 		target={[0, 0.5, 0]}
 		enablePan={false}
