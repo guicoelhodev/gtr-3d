@@ -1,11 +1,15 @@
 <script lang="ts">
+	import '../../app.css';
 	import { Canvas } from '@threlte/core';
+	import { Theatre } from '@threlte/theatre';
 	import Scene from './Scene.svelte';
 </script>
 
 <main class="environment">
 	<Canvas>
-		<Scene />
+		<Theatre>
+			<Scene />
+		</Theatre>
 	</Canvas>
 </main>
 
