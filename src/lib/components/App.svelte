@@ -1,16 +1,21 @@
 <script lang="ts">
 	import '../../app.css';
 	import { Canvas } from '@threlte/core';
-	import { Theatre } from '@threlte/theatre';
+	import { Project, Studio, Theatre } from '@threlte/theatre';
+  import { dev } from '$app/environment'
 	import Scene from './Scene.svelte';
 </script>
 
 <main class="environment">
 	<Canvas>
 		<Theatre>
-			<Scene />
+				<Project name='GTR project'>
+					<Scene />
+					<Studio enabled={dev} />
+				</Project>
 		</Theatre>
 	</Canvas>
+
 </main>
 
 <style>
